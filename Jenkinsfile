@@ -16,10 +16,5 @@ pipeline {
                 bat 'npm test'
             }
         }
-        stage('Build Docker Image') {
-            steps {
-                bat 'docker build -t sit753-app .'
-            }
-        }
     }
 }
