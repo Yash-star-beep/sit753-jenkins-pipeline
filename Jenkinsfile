@@ -8,17 +8,17 @@ pipeline {
         }
         stage('Install Dependencies') {
             steps {
-                sh 'npm install'
+                bat 'npm install'
             }
         }
         stage('Run Tests') {
             steps {
-                sh 'npm test'
+                bat 'npm test'
             }
         }
         stage('Build Docker Image') {
             steps {
-                sh 'docker build -t sit753-app .'
+                bat 'docker build -t sit753-app .'
             }
         }
     }
